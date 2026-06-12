@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE php>
+<php lang="en">
 <head>
 <title> DATA MAHASISWA </title>
 </head>
@@ -7,15 +7,15 @@
     </h1>
       <table border="1" align="center" cellspacing="0" cellpadding="10px">
         <tr> 
-          <td> <a href ="inndex.html"> Home </a>  </td> 
-          <td> <a href ="kontak.html"> Kontak </a> </td>
-          <td> <a href ="profile.html"> Profile </a> </td>
-          <td> <a href ="mahasiswa.html"> Mahasiswa </a></td>
+          <td> <a href ="inndexphp"> Home </a>  </td> 
+          <td> <a href ="kontakphp"> Kontak </a> </td>
+          <td> <a href ="profilephp"> Profile </a> </td>
+          <td> <a href ="mahasiswaphp"> Mahasiswa </a></td>
         </tr>
       </table>
 <h2> DATA MAHASISWA </h2>
 
-<a href="tambahdata.html">
+<a href="tambahdataphp">
   <button> Tambah Data</button>
 </a>
  
@@ -90,4 +90,4 @@
       </table>
  
 </body>
-</html>
+</php>

@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE php>
+<php lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +7,7 @@
 </head>
 <body>
     <h2> Tambah Data Mahasiswa</h2>
-    <form action="mahasiswa.html" method="post"> 
+    <form action="mahasiswaphp" method="post"> 
         <table cellpading="5px">
             <tr>
                 <td><label for="nama">Nama </label></td>
@@ -49,7 +49,7 @@
     </form>
    <break> 
     <h2> Tambah Data Mahasiswa</h2>
-    <form action="mahasiswa.html" method="post"> 
+    <form action="mahasiswaphp" method="post"> 
         <table cellpading="5px">
             <tr>
                 <td><label for="nama">Nama </label></td>
@@ -150,4 +150,4 @@
 
 </break>
 </body>
-</html>
+</php>

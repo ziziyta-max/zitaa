@@ -1,4 +1,4 @@
-<html lang="id">
+<php lang="id">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,19 +9,19 @@
    <nav class="navbar">
     <div class="logo">TI 2026</div>
     <ul class="nav-links">
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="profile.html">Profile</a></li>
-      <li><a href="kontak.html">Kontak</a></li>
+      <li><a href="indexphp" class="active">Home</a></li>
+      <li><a href="profilephp">Profile</a></li>
+      <li><a href="kontakphp">Kontak</a></li>
     </ul>
   </nav>
 
   </h1>
       <table border="1" align="center" cellspacing="0" cellpadding="10px">
         <tr> 
-          <td> <a href ="inndex.html"> Home </a>  </td> 
-          <td> <a href ="kontak.html"> Kontak </a> </td>
-          <td> <a href ="profile.html"> Profile </a> </td>
-          <td> <a href ="mahasiswa.html"> Mahasiswa </a></td>
+          <td> <a href ="inndexphp"> Home </a>  </td> 
+          <td> <a href ="kontakphp"> Kontak </a> </td>
+          <td> <a href ="profilephp"> Profile </a> </td>
+          <td> <a href ="mahasiswaphp"> Mahasiswa </a></td>
         </tr>
       </table>
 
@@ -37,4 +37,4 @@
 
   
 </body>
-</html>
+</php>

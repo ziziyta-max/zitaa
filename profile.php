@@ -5,23 +5,14 @@
   <title>TI 2026 - Profile</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
-   <nav class="navbar">
-    <div class="logo">TI 2026</div>
-    <ul class="nav-links">
-      <li><a href="indexphp" class="active">Home</a></li>
-      <li><a href="profilephp">Profile</a></li>
-      <li><a href="kontakphp">Kontak</a></li>
-    </ul>
-  </nav>
 
   </h1>
       <table border="1" align="center" cellspacing="0" cellpadding="10px">
         <tr> 
-          <td> <a href ="inndexphp"> Home </a>  </td> 
-          <td> <a href ="kontakphp"> Kontak </a> </td>
-          <td> <a href ="profilephp"> Profile </a> </td>
-          <td> <a href ="mahasiswaphp"> Mahasiswa </a></td>
+          <td> <a href ="inndex.php"> Home </a>  </td> 
+          <td> <a href ="kontak.php"> Kontak </a> </td>
+          <td> <a href ="profile.php"> Profile </a> </td>
+          <td> <a href ="mahasiswa.php"> Mahasiswa </a></td>
         </tr>
       </table>
 

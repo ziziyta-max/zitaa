@@ -21,11 +21,12 @@ $no = 1;
 <head>
     <meta charset="UTF-8">
     <title>DATA MAHASISWA</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-```
+
 <table border="1" align="center" cellspacing="0" cellpadding="10">
     <tr>
         <td><a href="index.php">Home</a></td>
@@ -68,10 +69,9 @@ $no = 1;
         <td><?= $mhs['nim']; ?></td>
 
         <td align="center">
-            <img
-                src="asset/image/<?= $mhs['foto']; ?>"
-                width="70">
-        </td>
+    <img src="asset/image/<?= $mhs['foto']; ?>" class="foto-mhs"> 
+</td>
+              
 
         <td><?= $mhs['jurusan']; ?></td>
 
@@ -112,7 +112,6 @@ $no = 1;
         <td>4,4</td>
     </tr>
 </table>
-```
 
 </body>
 </html>

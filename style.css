@@ -1,0 +1,325 @@
+/* ==========================
+   GOOGLE FONT
+========================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+/* ==========================
+   BODY
+========================== */
+
+body{
+    min-height:100vh;
+    background: linear-gradient(
+        135deg,
+        #667eea,
+        #764ba2,
+        #ff758c
+    );
+    background-size:400% 400%;
+    animation: gradientMove 10s ease infinite;
+    color:white;
+    padding:30px;
+}
+
+@keyframes gradientMove{
+    0%{
+        background-position:0% 50%;
+    }
+    50%{
+        background-position:100% 50%;
+    }
+    100%{
+        background-position:0% 50%;
+    }
+}
+
+/* ==========================
+   CONTAINER
+========================== */
+
+.container,
+.center,
+.card{
+    background:rgba(255,255,255,0.15);
+    backdrop-filter:blur(12px);
+    border-radius:20px;
+    padding:30px;
+    margin:auto;
+    max-width:1000px;
+    box-shadow:0 8px 32px rgba(0,0,0,0.2);
+    animation:slideUp 1s ease;
+}
+
+/* ==========================
+   JUDUL
+========================== */
+
+h1,h2{
+    text-align:center;
+    margin-bottom:20px;
+    color:white;
+    text-shadow:2px 2px 10px rgba(0,0,0,.3);
+}
+
+/* ==========================
+   NAVBAR
+========================== */
+
+table:first-of-type{
+    margin:20px auto;
+    border-collapse:collapse;
+    overflow:hidden;
+    border-radius:12px;
+}
+
+table:first-of-type td{
+    background:white;
+    transition:.3s;
+}
+
+table:first-of-type td:hover{
+    background:#ff758c;
+    transform:translateY(-3px);
+}
+
+table:first-of-type a{
+    text-decoration:none;
+    color:#333;
+    font-weight:600;
+    padding:10px 20px;
+    display:block;
+}
+
+/* ==========================
+   BUTTON
+========================== */
+
+button,
+.btn{
+    background:linear-gradient(
+        45deg,
+        #ff758c,
+        #ff7eb3
+    );
+
+    border:none;
+    color:white;
+    padding:12px 25px;
+    border-radius:30px;
+    cursor:pointer;
+    font-size:16px;
+    font-weight:600;
+
+    transition:.3s;
+}
+
+button:hover,
+.btn:hover{
+    transform:translateY(-5px) scale(1.05);
+    box-shadow:0 10px 25px rgba(0,0,0,.3);
+}
+
+/* ==========================
+   PARAGRAF
+========================== */
+
+p{
+    margin-top:15px;
+    line-height:1.8;
+}
+
+/* ==========================
+   FOTO PROFILE
+========================== */
+
+.profile-img{
+    width:180px;
+    height:180px;
+    border-radius:50%;
+    object-fit:cover;
+    display:block;
+    margin:20px auto;
+
+    border:5px solid white;
+
+    animation:float 3s ease-in-out infinite;
+}
+
+@keyframes float{
+    0%{
+        transform:translateY(0px);
+    }
+
+    50%{
+        transform:translateY(-15px);
+    }
+
+    100%{
+        transform:translateY(0px);
+    }
+}
+
+/* ==========================
+   FOTO MAHASISWA
+========================== */
+
+img{
+    transition:.4s;
+}
+
+img:hover{
+    transform:scale(1.15) rotate(3deg);
+}
+.foto-mhs{
+    width:40px;
+    height:40px;
+    object-fit:cover;
+    border-radius:50%;
+    border:2px solid white;
+    transition:0.3s;
+}
+
+.foto-mhs:hover{
+    transform:scale(1.1);
+}
+
+/* ==========================
+   TABEL MAHASISWA
+========================== */
+
+table{
+    border-collapse:collapse;
+}
+
+table:not(:first-of-type){
+    background:white;
+    color:black;
+    width:100%;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,.2);
+}
+
+th{
+    background:#764ba2;
+    color:white;
+    padding:12px;
+}
+
+td{
+    padding:10px;
+}
+
+tr{
+    transition:.3s;
+}
+
+tr:hover{
+    background:#f3f3f3;
+    transform:scale(1.01);
+}
+
+/* ==========================
+   FORM
+========================== */
+
+form{
+    background:white;
+    color:black;
+    padding:30px;
+    border-radius:20px;
+    max-width:700px;
+    margin:auto;
+    box-shadow:0 10px 25px rgba(0,0,0,.2);
+}
+
+input,
+select,
+textarea{
+    width:100%;
+    padding:10px;
+    border:none;
+    border-radius:10px;
+    background:#f0f0f0;
+    margin-top:5px;
+}
+
+input:focus,
+select:focus{
+    outline:none;
+    background:#e8e8e8;
+    transform:scale(1.02);
+}
+
+/* ==========================
+   FOOTER
+========================== */
+
+footer{
+    margin-top:50px;
+    text-align:center;
+    color:white;
+}
+
+/* ==========================
+   ANIMASI
+========================== */
+
+.fade-in{
+    animation:fadeIn 1.5s ease;
+}
+
+.delay2{
+    animation-delay:.5s;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@keyframes slideUp{
+    from{
+        opacity:0;
+        transform:translateY(50px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media(max-width:768px){
+
+    body{
+        padding:10px;
+    }
+
+    table{
+        font-size:12px;
+    }
+
+    h1{
+        font-size:24px;
+    }
+}

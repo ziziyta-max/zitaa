@@ -1,4 +1,6 @@
-<php lang="id">
+<!DOCTYPE html>
+
+<html lang="id">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,7 +13,7 @@
   </h1>
       <table border="1" align="center" cellspacing="0" cellpadding="10px">
         <tr> 
-          <td> <a href ="inndex.php"> Home </a>  </td> 
+          <td> <a href ="index.php"> Home </a>  </td> 
           <td> <a href ="kontak.php"> Kontak </a> </td>
           <td> <a href ="profile.php"> Profile </a> </td>
           <td> <a href ="mahasiswa.php"> Mahasiswa </a></td>
@@ -21,10 +23,10 @@
 
   <section class="container">
     <h2>Kontak</h2>
-    <p><strong>Instagram:</strong> @username</p>
-    <p><strong>TikTok:</strong> @username</p>
-    <p><strong>Email:</strong> email@gmail.com</p>
-    <p><strong>WhatsApp:</strong> 08xxxxxxxxxx</p>
+    <p><strong>Instagram:</strong> @jiitsme_</p>
+    <p><strong>TikTok:</strong> @jitsean_</p>
+    <p><strong>Email:</strong> ziziyta@gmail.com</p>
+    <p><strong>WhatsApp:</strong> 085600830582</p>
   </section>
 </body>
-</php>
+</html>

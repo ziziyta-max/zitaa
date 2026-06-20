@@ -1,4 +1,6 @@
-<php lang="id">
+<!DOCTYPE html>
+
+<html lang="id">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,14 +17,14 @@
       </h1>
       <table border="1" align="center" cellspacing="0" cellpadding="10px">
         <tr> 
-          <td> <a href ="inndex.php"> Home </a>  </td> 
+          <td> <a href ="index.php"> Home </a>  </td> 
           <td> <a href ="kontak.php"> Kontak </a> </td>
           <td> <a href ="profile.php"> Profile </a> </td>
           <td> <a href ="mahasiswa.php"> Mahasiswa </a></td>
         </tr>
       </table>
       
-      <img src="https://developer.android.com/design/ui/mobile/guides/foundations/system-bars" width="200px"/>
+      <img src="asset/image/profile1.jpg" class="profile-img">
     
 
        <p>Website ini berisi informasi tentang program studi yang saat ini sedang saya jalani
@@ -38,4 +40,4 @@
     <p>© 2026 TI 2026 | Dibuat oleh Razita Kafia Laiyina</p>
   </footer>
 </body>
-</php>
+</html>

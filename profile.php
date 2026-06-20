@@ -25,7 +25,12 @@
     <p><strong>Nama:</strong> Razita Kafia Laiyina </p>
     <p><strong>NIM:</strong> 13242520001 </p>
     <p><strong>Jurusan:</strong> Teknik dan Ilmu Komputer </p>
-    <p><strong>Hobi:</strong> Coding </p>
+    <p><strong>Hobi:</strong> Stand K-pop</p>
+    <div class="floating-music">
+    <audio controls loop>
+        <source src="asset/music/JoyRide.mp3" type="audio/mpeg">
+    </audio>
+</div>
   </section>
 
   

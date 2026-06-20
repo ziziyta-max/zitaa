@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 
 <html lang="id">
@@ -9,6 +11,7 @@
 </head>
 <body>
    
+
 
   <section class="center">
     <div class="hero-text fade-in">
@@ -26,7 +29,8 @@
       
       <img src="asset/image/profile1.jpg" class="profile-img">
     
-
+      <?php include 'music.php'; ?>
+      
        <p>Website ini berisi informasi tentang program studi yang saat ini sedang saya jalani
         dan juga berisi tentang beberapa informasi mengenai kepribadian yang saya miliki, semoga website ini dapat memberikan inforamsi yang 
     bermanfaat bagi para pembacanya. </p>

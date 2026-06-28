@@ -1,18 +1,9 @@
 <?php
 
 // Koneksi Database
-$koneksi = mysqli_connect("localhost", "root", "", "rztweekly");
-
-if (!$koneksi) {
-    die("Koneksi database gagal: " . mysqli_connect_error());
-}
-
-// Query Data Mahasiswa
+require 'fungsi.php';
 $query = "SELECT * FROM mahasiswa";
-$result = mysqli_query($koneksi, $query);
-
-$no = 1;
-
+$mahasiswas = tampildata($query);
 ?>
 
 <!DOCTYPE html>
@@ -59,10 +50,14 @@ $no = 1;
         <th>No HP</th>
     </tr>
 
-    <?php while($mhs = mysqli_fetch_assoc($result)) : ?>
+    <?php 
+    $no = 1;
+    foreach($mahasiswas as $mhs)
+     {
+    ?>
 
     <tr>
-        <td align="center"><?= $no++; ?></td>
+        <td align="center"><?=$no++ ?></td>
 
         <td><?= $mhs['nama']; ?></td>
 
@@ -79,9 +74,8 @@ $no = 1;
 
         <td><?= $mhs['no_hp']; ?></td>
     </tr>
-
-    <?php endwhile; ?>
-
+   <?php } ?>
+   
 </table>
 
 <hr>

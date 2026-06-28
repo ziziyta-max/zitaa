@@ -1,153 +1,151 @@
+<?php 
+require 'fungsi.php';
+if(isset($_POST["kirim"]))
+{
+    $nama = $_POST["nama"];
+    $nim = $_POST["nim"];
+    $email = $_POST["email"];
+    $prodi = $_POST["jurusan"];
+    $nohp = $_POST["nohp"];
+    $foto = $_POST["foto"];
+
+    $query = "INSERT INTO mahasiswa (nama,nim,jurusan,email,no_hp,foto)
+              VALUES ('$nama','$nim','$prodi','$email','$nohp','$foto')";
+
+    $result = mysqli_query($koneksi, $query);
+
+    if($result){
+        echo "<script>
+            alert('Data berhasil ditambahkan');
+            window.location.href='mahasiswa.php';
+        </script>";
+    }else{
+        echo "<script>
+            alert('Data gagal ditambahkan');
+        </script>";
+
+        echo mysqli_error($koneksi);
+    }
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tambah Data | Teknologi Informasi </title>
+    <link rel="stylesheet" href="style.css">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
-    <h2> Tambah Data Mahasiswa</h2>
-    <form action="mahasiswa.php" method="post"> 
-        <table cellpading="5px">
-            <tr>
-                <td><label for="nama">Nama </label></td>
-                <td> : </td>
-                <td><input type="text" id="nama" name="nama" required/></label></td>
-            </tr>
-             <tr>
-                <td><label for="nim"> NIM </label></td>
-                <td> : </td>
-                <td><input type="text" id="nim" name="nim " required/></label></td>
-            </tr>
-             <tr>
-                <td><label for="foto"> Foto </label></td>
-                <td> : </td>
-                <td><input type="file" id="foto" name="foto" required/></label></td>
-            </tr>
- <tr>
-                <td><label for="uts"> UTS</label></td>
-                <td> : </td>
-                <td><input type="number" id="uts" name="uts" required/></label></td>
-            </tr>
-            <tr>
-                <td><label for="uas"> UAS</label></td>
-                <td> : </td>
-                <td><input type="number" id="uas" name="uas" required/></label></td>
-            </tr>
-            <tr>
-                <td><label for="tugas">Tugas</label></td>
-                <td> : </td>
-                <td><input type="number" id="tugas" name="tugas" required/></label></td>
-            </tr>
-            <tr>
-                <td colspan="3">
-                    <button type="submit" name="submit">Tambah Data</button>
-                </td>
-            </tr>
-        </table>
-    
-    </form>
-   <break> 
-    <h2> Tambah Data Mahasiswa</h2>
-    <form action="mahasiswaphp" method="post"> 
-        <table cellpading="5px">
-            <tr>
-                <td><label for="nama">Nama </label></td>
-                <td> : </td>
-                <td><input type="text" id="nama" name="nama" required/></label></td>
-            </tr>
-             <tr>
-                <td><label for="nim"> NIM </label></td>
-                <td> : </td>
-                <td><input type="text" id="nim" name="nim " required/></label></td>
-            </tr>
-             <tr>
-                <td><label for="password"> Password </label></td>
-                <td> : </td>
-                <td><input type="password" id="password" name="password" required/></label></td>
-            </tr>
-             <tr>
-                <td><label for="email"> Email</label></td>
-                <td> : </td>
-                <td><input type="email" id="email" name="email" required/></label></td>
-            </tr>
-             <tr>
-                <td><label for="no hp"> NO HP </label></td>
-                <td> : </td>
-                <td><input type=" tel" id="no hp" name="no hp" required/></label></td>
-            </tr>
-             <tr>
-                <td><label for="website pribadi"> Website pribadi </label></td>
-                <td> : </td>
-                <td><input type="input  url" id="website pribadi" name="website pribadi" required/></label></td>
-            </tr>
-            <tr>
-                <td><label for="tanggal lahir"> tanggal lahir </label></td>
-                <td> : </td>
-                <td><input type="input data" id="tanggal lahir" name="tanggal lahir" required/></label></td>
-            </tr>
-             <tr>
-                <td><label for="warna favorit"> warna favorit </label></td>
-                <td> : </td>
-                <td><input type="input color" id="warna favorit" name="warna favorit" required/></label></td>
-            </tr>
-            <tr>
-                <td><label for="tingkat kepuasan"> tingkat kepuasan </label></td>
-                <td> : </td>
-                <td><input type="input range" id="tingkat kepuasan" name="tingkat kepuasan" required/></label></td>
-            </tr>
-            <td><label>jenis kelamin</label></td>
-                <td>:</td>
-                <td>
-                <input type="radio" name="jk" value="Laki-Laki">
-                <label for="jk">Laki-Laki</label>
-                <input type="radio" name="pr" value="Perempuan">
-                <label for="pr">Perempuan</label>
-                </td>
-                <tr>
-            <td><label>Hobi</label></td>
-                <td>:</td>
-                <td>
-                <input type="checkbox" name="hobi" value="olahraga">
-                <label for="hobi">olahraga</label>
-                <input type="checkbox" name="hobi" value="melukis">
-                <label for="hobi">melukis</label>
-                <input type="checkbox" name="hobi" value="memasak">
-                <label for="hobi">memasak</label>
-                </td>
-                </tr>
-             <tr>
-                <td><label for="foto"> Foto </label></td>
-                <td> : </td>
-                <td><input type="file" id="foto" name="foto" required/></label></td>
-            </tr>
- <tr>
-                <td><label for="alamat">Alamat</label></td>
-                <td> : </td>
-                <td><input type="textarea" id="alamat" name="alamat" required/></label></td>
-            </tr>
-        </table> 
+    <body>
 
-              <table>
-                <label for="jurusan">Jurusan</label>
-                <select name="jurusan" id="jurusan">
-                    <option value="TI">TI</option>
-                    <option value="IF">IF</option>
-                    <option value="PBI">PBI</option>
-                </select>
-            </table>
-             <tr>
-                <td colspan="3">
-                    <button type="submit" name="submit">Tambah Data</button>
-                </td>
-            </tr>
+<div class="form-container">
 
-        </table>
-    
-    </form>
+    <div class="form-card">
 
+        <h2>
+            <i class="fa-solid fa-user-plus"></i>
+            Tambah Data Mahasiswa
+        </h2>
 
+        <p class="subtitle">
+            Silakan isi seluruh data mahasiswa dengan lengkap.
+        </p>
 
-</break>
+        <form action="" method="post">
+
+            <div class="input-group">
+                <label>Nama</label>
+                <div class="input-box">
+                    <i class="fa-solid fa-user"></i>
+                    <input type="text" name="nama" required>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label>NIM</label>
+                <div class="input-box">
+                    <i class="fa-solid fa-id-card"></i>
+                    <input type="text" name="nim" required>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label>Jurusan</label>
+                <div class="input-box">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <input type="text" name="jurusan" required>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label>Email</label>
+                <div class="input-box">
+                    <i class="fa-solid fa-envelope"></i>
+                    <input type="email" name="email" required>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label>Nomor HP</label>
+                <div class="input-box">
+                    <i class="fa-solid fa-phone"></i>
+                    <input type="text" name="nohp" required>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label>Foto</label>
+                <div class="input-box">
+                    <i class="fa-solid fa-image"></i>
+                    <input type="text" name="foto" placeholder="contoh : foto.jpg">
+                </div>
+            </div>
+
+            <div class="button-group">
+
+                <button type="submit" name="kirim">
+                    <i class="fa-solid fa-floppy-disk"></i>
+                    Simpan Data
+                </button>
+
+                <a href="mahasiswa.php" class="btn-back">
+                    <i class="fa-solid fa-arrow-left"></i>
+                    Kembali
+                </a>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+<script>
+
+const inputs=document.querySelectorAll("input");
+
+inputs.forEach(input=>{
+
+input.addEventListener("focus",()=>{
+
+input.parentElement.style.boxShadow="0 0 20px rgba(255,255,255,.6)";
+
+});
+
+input.addEventListener("blur",()=>{
+
+input.parentElement.style.boxShadow="none";
+
+});
+
+});
+
+</script>
+</body>
 </body>
 </html>

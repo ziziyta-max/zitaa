@@ -16,7 +16,7 @@
   <section class="center">
     <div class="hero-text fade-in">
       <h1 align="center">
-        SELAMAT DATANG DI WEB TI UNIMUS 
+        SELAMAT DATANG DI WEB UNIMUS 
       </h1>
       <table border="1" align="center" cellspacing="0" cellpadding="10px">
         <tr> 

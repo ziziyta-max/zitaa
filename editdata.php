@@ -1,18 +1,26 @@
 <?php 
 require 'fungsi.php';
+
+$id = $_GET["id"];
+
+$query = "SELECT * FROM mahasiswa WHERE id=$id";
+
+$mhs = tampildata($query)[0];
+
+
 if(isset($_POST["kirim"]))
 {
    
-    if(tambahdata($_POST, $_FILES["foto"])> 0)
+    if(editdata($_POST, $id)> 0)
     {
         echo "<script>
-            alert('Data berhasil ditambahkan');
+            alert('Data berhasil diedit');
             window.location.href='mahasiswa.php';
         </script>";
     }else
     {
         echo "<script>
-            alert('Data gagal ditambahkan');
+            alert('Data gagal diedit');
         </script>";
 
         echo mysqli_error($koneksi);
@@ -40,20 +48,20 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 
         <h2>
             <i class="fa-solid fa-user-plus"></i>
-            Tambah Data Mahasiswa
+            Edit Data Mahasiswa
         </h2>
 
         <p class="subtitle">
             Silakan isi seluruh data mahasiswa dengan lengkap.
         </p>
 
-        <form action="" method="post" enctype="multipart/form-data">
+        <form action="" method="post">
 
             <div class="input-group">
                 <label>Nama</label>
                 <div class="input-box">
                     <i class="fa-solid fa-user"></i>
-                    <input type="text" name="nama" required>
+                    <input type="text" name="nama" value = "<?= $mhs["nama"]?>"required>
                 </div>
             </div>
 
@@ -61,7 +69,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
                 <label>NIM</label>
                 <div class="input-box">
                     <i class="fa-solid fa-id-card"></i>
-                    <input type="text" name="nim" required>
+                    <input type="text" name="nim" value = "<?= $mhs["nim"]?>" required>
                 </div>
             </div>
 
@@ -69,7 +77,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
                 <label>Jurusan</label>
                 <div class="input-box">
                     <i class="fa-solid fa-graduation-cap"></i>
-                    <input type="text" name="jurusan" required>
+                    <input type="text" name="jurusan" value = "<?= $mhs["jurusan"]?>" required>
                 </div>
             </div>
 
@@ -77,7 +85,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
                 <label>Email</label>
                 <div class="input-box">
                     <i class="fa-solid fa-envelope"></i>
-                    <input type="email" name="email" required>
+                    <input type="email" name="email"value = "<?= $mhs["email"]?>" required>
                 </div>
             </div>
 
@@ -85,7 +93,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
                 <label>Nomor HP</label>
                 <div class="input-box">
                     <i class="fa-solid fa-phone"></i>
-                    <input type="text" name="nohp" required>
+                    <input type="text" name="no_hp" value = "<?= $mhs["no_hp"]?>" required>
                 </div>
             </div>
 
@@ -93,7 +101,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
                 <label>Foto</label>
                 <div class="input-box">
                     <i class="fa-solid fa-image"></i>
-                    <input type="file" id="foto" name="foto" placeholder="contoh : foto.jpg">
+                    <input type="text" name="foto" placeholder="contoh : foto.jpg">
                 </div>
             </div>
 

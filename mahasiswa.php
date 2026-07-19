@@ -41,13 +41,15 @@ $mahasiswas = tampildata($query);
         <th rowspan="2">Nama</th>
         <th rowspan="2">NIM</th>
         <th rowspan="2">Foto</th>
-        <th colspan="3">Data Mahasiswa</th>
+        <th colspan="4">Data Mahasiswa</th>
+
     </tr>
 
     <tr>
         <th>Jurusan</th>
         <th>Email</th>
         <th>No HP</th>
+        <th> Aksi </th>
     </tr>
 
     <?php 
@@ -73,39 +75,18 @@ $mahasiswas = tampildata($query);
         <td><?= $mhs['email']; ?></td>
 
         <td><?= $mhs['no_hp']; ?></td>
+        <td>
+                    <a href="editdata.php?id=<?= $mhs['id']; ?>">
+                        <button class="edit">Edit</button>
+                    </a>
+
+                    <a href="deletedata.php?id=<?= $mhs['id']; ?>" onclick="return confirm('seirus mau di hapus???')"
+                    ><button class="hapus">Hapus</button>
+                    </a>
+                </td>
     </tr>
    <?php } ?>
    
-</table>
-
-<hr>
-
-<table border="1" cellspacing="5" cellpadding="10">
-    <tr>
-        <td>1,1</td>
-        <td>1,2</td>
-        <td>1,3</td>
-        <td>1,4</td>
-    </tr>
-
-    <tr>
-        <td>2,1</td>
-        <td rowspan="2" colspan="2" align="center">?</td>
-        <td>2,4</td>
-    </tr>
-
-    <tr>
-        <td>3,1</td>
-        <td>3,4</td>
-    </tr>
-
-    <tr>
-        <td>4,1</td>
-        <td>4,2</td>
-        <td>4,3</td>
-        <td>4,4</td>
-    </tr>
-</table>
 
 </body>
 </html>
